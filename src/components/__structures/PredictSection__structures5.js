@@ -17,7 +17,7 @@ export default function PredictSection__structures5() {
   const fetchHistorique = async () => {
     try {
       
-      const response = await fetch(`http://147.79.114.72:32040/historique`);
+      const response = await fetch(`${apiUrl}/historique`);
       if (!response.ok) {
         throw new Error('Erreur lors de la récupération de l\'historique');
       }
@@ -38,7 +38,7 @@ export default function PredictSection__structures5() {
     setResult(null);
 
     try {
-      const response = await fetch(`http://147.79.114.72:32040/verifier`, {
+      const response = await fetch(`${apiUrl}/verifier`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
