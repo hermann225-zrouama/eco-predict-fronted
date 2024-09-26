@@ -11,7 +11,7 @@ COPY . ./
 
 ARG REACT_APP_API_URL
 
-ENV REACT_APP_API_URL $REACT_APP_API_URL
+ENV REACT_APP_API_URL "http://eco-predict-backend.eco-predict-backend-space.svc.cluster.local:8000"
 
 RUN npm run build
 
