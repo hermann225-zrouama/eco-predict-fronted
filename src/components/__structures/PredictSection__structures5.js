@@ -17,7 +17,7 @@ export default function PredictSection__structures5() {
   const fetchHistorique = async () => {
     try {
       
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/historique`);
+      const response = await fetch(`http://eco-predict-backend.eco-predict-backend-space.svc.cluster.local:8000/historique`);
       if (!response.ok) {
         throw new Error('Erreur lors de la récupération de l\'historique');
       }
@@ -38,7 +38,7 @@ export default function PredictSection__structures5() {
     setResult(null);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/verifier`, {
+      const response = await fetch(`http://eco-predict-backend.eco-predict-backend-space.svc.cluster.local:8000/verifier`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
